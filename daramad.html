@@ -6,6 +6,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="./style.css">
 </head>
+
+
 <body>
 
     <div class="wrapper2" style="top: -1.5%;"> 
@@ -26,11 +28,11 @@
 
     <div class="container2">
 
-        <button class="activecamp">
+        <button class="activecamp" id="button1">
 کمپین‌های درحال اجرا
         </button>
 
-        <button class="noactivecamp">
+        <button class="noactivecamp" id="button2">
 کمپین‌های تمام شده
         </button>
 
@@ -162,6 +164,23 @@
     
     
     </footer>
+
+    <script>
+        // Get the buttons
+        const button1 = document.getElementById('button1');
+        const button2 = document.getElementById('button2');
+      
+        // Add a click event listener to both buttons
+        button1.addEventListener('click', swapClasses);
+        button2.addEventListener('click', swapClasses);
+      
+        function swapClasses() {
+          // Swap the classes
+          const tempClass = button1.className;
+          button1.className = button2.className;
+          button2.className = tempClass;
+        }
+      </script>
     
     
 </body>
