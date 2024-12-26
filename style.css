@@ -12,6 +12,13 @@
         font-display: swap;
     }
 
+    .prof {
+        pointer-events: none;
+        outline: none;  
+        -webkit-tap-highlight-color: transparent;
+        -webkit-user-select: none;
+        user-select: none;
+    }
 
 body {
     background-color: rgba(19, 26, 34, 1);
@@ -119,6 +126,11 @@ body {
   }
 
 .logo1 {
+    pointer-events: none;
+    outline: none;  
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    user-select: none;
     transform: scale(0.8);
     overflow: hidden;
     position: fixed;
@@ -130,6 +142,11 @@ body {
 }
 
 .logo2 {
+    pointer-events: none;
+    outline: none;  
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    user-select: none;
     transform: scale(0.6);
     top: 52.7%;
     left: 27.8%;
@@ -373,7 +390,6 @@ body {
     outline: none;  
     -webkit-tap-highlight-color: transparent;
     -webkit-user-select: none;
-    /* -wwebkit-touch-callout: none; */
     user-select: none;
     /* margin-top: -3px; */
     margin-left: 38%;
@@ -653,6 +669,11 @@ body {
 
 
 .companylogo {
+    pointer-events: none;
+    outline: none;  
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    user-select: none;
     padding: 5px;
     padding-right: 1vw;
     margin-right: 1vw;
