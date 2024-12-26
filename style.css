@@ -263,11 +263,13 @@ body {
 
 
 .name {
+    font-family: 'BTitr','Prompt', 'Inter', 'Roboto', 'Open Sans', Arial, sans-serif;
     color: white;
     font-weight: bold;
     font-size: 18px;
 }
 .points {
+    font-family: 'BTitr','Prompt', 'Inter', 'Roboto', 'Open Sans', Arial, sans-serif;
     color: white;
     background-color:  rgba(19, 26, 34, 1);
     border: solid rgba(102, 204, 255, 1) 1px ;
