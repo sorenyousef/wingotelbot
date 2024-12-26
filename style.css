@@ -367,7 +367,14 @@ body {
       transform: rotate(360deg);
     }
   }
+
 .logoc {
+    pointer-events: none;
+    outline: none;  
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    /* -wwebkit-touch-callout: none; */
+    user-select: none;
     /* margin-top: -3px; */
     margin-left: 38%;
     position: relative;
