@@ -6,7 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./style.css">
 </head>
-<body>
+<body style="width: 0.1vw; height: 0.5vw;">
 
 
     <div class="wrapper1"> 
@@ -30,11 +30,29 @@
     </div>
 
 
-    <div class="wrapc">
-        <div class="circle"></div>
-            <img src="./logonew1.svg" alt="" class="logoc">
+
+
+
+
+
+
+
+            
        
-    </div>
+
+
+    <div class="pulse-animation-wrapper">
+        <div class="pulse-center-circle"><img src="./logonew1.svg" alt="" class="logoc"></div>
+        <div class="pulse-dots-container">
+          <div class="pulse-layer-1"></div>
+          <div class="pulse-layer-2"></div>
+          <div class="pulse-layer-3"></div>
+          <div class="pulse-layer-4"></div>
+          <div class="pulse-layer-5"></div>
+        </div>
+      </div>
+
+
 
 
 
@@ -118,14 +136,34 @@
 
 
 
-</footer>
+<script>
+    const pulseLayers = document.querySelectorAll('[class^="pulse-layer-"]');
+    const dotsPerLayer = 30;
 
-
-
-
-
-</footer>
-
+    pulseLayers.forEach((layer, layerIndex) => {
+      const radius = 50 + (layerIndex * 16); // Reduced from 70 + 40 per layer to 50 + 20 per layer
+      
+      for (let i = 0; i < dotsPerLayer; i++) {
+        const angle = (i * 2 * Math.PI) / dotsPerLayer;
+        const x = Math.cos(angle) * radius;
+        const y = Math.sin(angle) * radius;
+        
+        const dot = document.createElement('div');
+        dot.className = 'pulse-dot';
+        
+        dot.style.setProperty('--x', `${x}px`);
+        dot.style.setProperty('--y', `${y}px`);
+        
+        const delay = layerIndex * -0.2;
+        dot.style.animationDelay = `${delay}s`;
+        
+        dot.style.left = '50%';
+        dot.style.top = '50%';
+        
+        layer.appendChild(dot);
+      }
+    });
+  </script>
 
 </body>
 </html>

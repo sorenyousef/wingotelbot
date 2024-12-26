@@ -392,9 +392,10 @@ body {
     -webkit-user-select: none;
     user-select: none;
     /* margin-top: -3px; */
-    margin-left: 38%;
+    /* margin-left: 38%; */
+    margin-left: 48px;
     position: relative;
-    transform: scale(0.57);
+    transform: scale(0.42);
 }
 
 
@@ -443,6 +444,93 @@ body {
     right: 2px;
 
 }
+
+.pulse-animation-wrapper {
+    position: fixed;
+    left: 25%;
+    top: 37%;
+    width: 100px;  /* Reduced from 600px */
+    height:100px; /* Reduced from 600px */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .pulse-center-circle {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+
+    align-items: center;
+    width: 40px;   /* Slightly smaller center circle */
+    height: 40px;  /* Slightly smaller center circle */
+    background: none;
+    border-radius: 50%;
+    z-index: 5;
+    transform: translate(40px, -30px);
+  }
+
+  .pulse-dots-container {
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    transform: translate(40px, -30px);
+  }
+
+  .pulse-dot {
+    position: absolute;
+    border-radius: 50%;
+    transform-origin: center;
+    animation: pulseRippleAnimation 3s ease-in-out infinite;
+  }
+
+  .pulse-layer-1 .pulse-dot {
+    width: 6px;    /* Slightly smaller dots */
+    height: 6px;
+    background: rgba(102, 204, 255, 1);
+  }
+
+  .pulse-layer-2 .pulse-dot {
+    width: 7px;
+    height: 7px;
+    background: rgba(0, 170, 255, 0.5);
+  }
+
+  .pulse-layer-3 .pulse-dot {
+    width: 8px;
+    height: 8px;
+    background: rgba(102, 204, 255, 1);
+  }
+
+  .pulse-layer-4 .pulse-dot {
+    width: 9px;
+    height: 9px;
+    background: rgba(0, 170, 255, 0.5);
+  }
+
+  .pulse-layer-5 .pulse-dot {
+    width: 10px;
+    height: 10px;
+    background: rgba(102, 204, 255, 1);
+  }
+
+  @keyframes pulseRippleAnimation {
+    0% {
+      transform: translate(var(--x), var(--y)) scale(1);
+      opacity: 0.3;
+    }
+    50% {
+      transform: translate(
+        calc(var(--x) * 1.1),
+        calc(var(--y) * 1.1)
+      ) scale(1.5);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(var(--x), var(--y)) scale(1);
+      opacity: 0.3;
+    }
+  }
 
 .missionlogo {
     margin-bottom: 50px;
@@ -531,6 +619,7 @@ body {
     border-radius: 10px;
     gap: 50px;
     position: fixed;
+    left: 2.5%;
     bottom: 3px;
     background-color: rgba(33, 45, 59, 1);
 }
